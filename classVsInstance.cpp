@@ -1,6 +1,6 @@
 using namespace std;
 #include <iostream>
-     
+
 class Person{
     public:
         int age;
@@ -13,7 +13,7 @@ class Person{
          // Add some more code to run some checks on initialAge
               if(initialAge >= 0){
                   age = initialAge;
-              }         
+              } 
               else {
                     age = 0;
                     cout  << "Age is not valid, setting age to 0." << "\n";
