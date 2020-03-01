@@ -1,6 +1,6 @@
 using namespace std;
 #include <iostream>
- 
+     
 class Person{
     public:
         int age;
