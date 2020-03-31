@@ -6,7 +6,7 @@ int main()
     cin >> n;
     cin.ignore(numeric_limits<streamsize>::max(), '\n');
     int remainder;
-    int prv , cr = 0;
+    int previous , current  = 0;
 
      while (n!=0)
       {
@@ -14,17 +14,17 @@ int main()
         n /= 2;
         if(remainder == 0)
         {
-            if(prv < cr)
+            if(previous < current)
             {
-                prv = cr;
+                previous = current;
             }
-            cr = 0;
+            current = 0;
         }
         else {
-                cr++;
+                current++;
         }
       }     
-        cout <<(prv > cr ? prv : cr) <<endl;
+        cout <<(previous > cr ? previous : current) <<endl;
 
   return 0;
 }
