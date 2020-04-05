@@ -35,9 +35,10 @@ class Student :  public Person{
         *   scores - An array of integers denoting the Person's test scores.
         */
         // Write your constructor here
-               public: Student(string firstName, string lastName, int id, vector<int> scores)
+             
+          Student(string firstName, string lastName, int id, vector<int> scores): Person(firstName,lastName,id)
                 {
-                          Person(firstName,lastName,id);
+                        //Person(firstName,lastName,id);
                           this->testScores = scores;
                 }
         /*	
@@ -45,19 +46,7 @@ class Student :  public Person{
         *   Return: A character denoting the grade.
         */
         // Write your function here
-                // public: char calculate(){
-                //         int sum = 0;
-                //         for(int i = 0; i <testScores.length; i++){
-                //                 sum += testScores[i];
-                //         }
-                //         int  avg = 0;
-                //         avg =sum / testScores;
-
-                     
-                // }
-	
-        public: char calculate()
-               {
+             char calculate(){
                    long size = testScores.size();
                     int sum=0;
                     char ch='O';
@@ -99,3 +88,4 @@ int main() {
 	cout << "Grade: " << s->calculate() << "\n";
 	return 0;
 }
+
